@@ -1,0 +1,27 @@
+The code below translates any Indian Language to English and hence will help in command promt to the Bot.
+
+
+!pip install mtranslate
+from mtranslate import translate
+
+def main():
+    print("Welcome to Indian Language Translator to English!")
+    print("Type 'exit' to quit the program.")
+
+    while True:
+        user_input = input("Enter the text in Indian language to translate to English: ")
+
+        if user_input.lower() == 'exit':
+            print("Thank you for using Indian Language Translator. Goodbye!")
+            break
+
+        try:
+            translated_text = translate(user_input, 'en')
+            print("Translated Text:", translated_text)
+        except Exception as e:
+            print("An error occurred:", str(e))
+
+if __name__ == "__main__":
+    main()
+
+The link to google colab is : https://colab.research.google.com/drive/14WLUvzvge-OzI2_p2o5Fs_tvwLd29io8
